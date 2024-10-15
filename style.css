@@ -1,0 +1,177 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+    background-color: #f7fafc;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 16px 0;
+}
+
+/* Sección de destacado */
+.featured-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.featured-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.featured-subtitle, .featured-description {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.featured-image {
+    margin-top: 24px;
+}
+
+.featured-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Botones de categorías con flexbox */
+.category-buttons {
+    display: flex;
+    justify-content: space-between; 
+    gap: 16px; 
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.category-btn {
+    flex-grow: 1; /* Hace que los botones crezcan proporcionalmente para ocupar todo el espacio disponible */
+    padding: 16px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.vegana {
+    background-color: #68d391;
+}
+
+.frutas {
+    background-color: #f6e05e;
+}
+
+.integral {
+    background-color: #f6ad55;
+}
+
+.category-btn:hover {
+    opacity: 0.8;
+}
+
+/* Estilo general para la sección de grid */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 16px; /
+}
+
+
+.grid-item {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+}
+
+/* Estilo para la imagen */
+.grid-img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+}
+
+/* Estilo para el texto */
+.grid-text {
+    font-size: 0.875rem; 
+    color: #333; 
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    
+    .grid-item.reverse {
+        flex-direction: row; 
+    }
+
+    .grid-item.reverse .grid-img {
+        width: 50%; 
+        margin-bottom: 0; 
+    }
+
+    .grid-item.reverse .grid-text {
+        width: 50%; 
+        padding-left: 16px; 
+    }
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 600px) {
+    .grid-section {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    
+    .grid-item {
+        flex-direction: column; 
+    }
+}
+/* Footer */
+.footer {
+    background-color: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 32px;
+}
